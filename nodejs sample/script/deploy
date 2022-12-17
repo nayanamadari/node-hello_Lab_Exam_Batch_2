@@ -1,0 +1,9 @@
+#!/bin/sh
+ ssh node@3.15.200.200 <<EOF
+ cd ~/node-jenkins-app-example
+ git pull
+ npm install 
+ pm2 stop app.js
+ pm2 start app.js
+ exit
+EOF
